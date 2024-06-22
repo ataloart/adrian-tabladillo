@@ -11,7 +11,7 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={lgDragAndDrop}
-          link="https://github.com/Ade-mir/company-landing-page-2"
+          link="https://adrian-tabladillo-drag-drop.netlify.app/"
           h3="Drag and Drop"
           p="Streaming App"
         />
