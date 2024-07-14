@@ -34,7 +34,7 @@ const About = () => {
     e.preventDefault();
     const scrollAmount = Math.min(Math.max(-e.deltaY, -1), 1) * 50; // Adjust scrolling speed
 
-    const maxScrollDistance = 200; // Adjust the maximum scroll distance
+    const maxScrollDistance = 500; // Adjust the maximum scroll distance
     const scrollDistance = Math.min(
       scrollAmount * maxScrollDistance,
       maxScrollDistance
