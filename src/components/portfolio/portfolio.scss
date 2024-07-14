@@ -1,0 +1,212 @@
+@import "../../App.scss";
+
+.portfolio {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    width: 360px;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+
+  .textContainer {
+    @include mobile {
+      align-self: flex-start;
+      margin-left: 30px;
+      margin-top: -30px;
+      gap: 0px;
+    }
+    h1 {
+      font-family: "Nunito Sans", sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: var(--text-color);
+      margin-top: 20px;
+
+      @include mobile {
+        display: fixed;
+        margin-top: 0px;
+        font-size: 20px;
+
+        margin-left: -20px;
+      }
+    }
+  }
+
+  // h2 {
+  //   font-family: "Nunito Sans", sans-serif;
+  //   text-transform: uppercase;
+  //   font-size: 30px;
+  //   color: var(--text-color);
+  // }
+
+  .scrollUpButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    @include mobile {
+      left: 0;
+      margin-top: 5%;
+      margin-bottom: 0;
+      margin-right: -70%;
+    }
+    img {
+      width: 50px;
+
+      border: 1px solid;
+      border-color: var(--text-color);
+
+      border-radius: 50%;
+      @include mobile {
+        align-self: flex-end;
+        width: 40px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .portfolioWrapper {
+    max-width: 1366px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7%;
+    @include mobile {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      width: 350px;
+      margin-top: 15px;
+      gap: 50px;
+    }
+
+    img {
+      display: flex;
+      margin: auto;
+      width: 200px;
+
+      @include mobile {
+        width: 200px;
+      }
+    }
+    .archWrapper {
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease;
+      gap: 30px;
+
+      @include mobile {
+        width: 400px;
+        align-items: left;
+        gap: 10px;
+      }
+
+      .selectBoxArch {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        cursor: pointer;
+
+        @include mobile {
+          width: 300px;
+        }
+      }
+    }
+
+    .webWrapper {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease;
+      gap: 30px;
+
+      @include mobile {
+        width: 300px;
+        gap: 10px;
+      }
+
+      .selectBoxWeb {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        cursor: pointer;
+
+        @include mobile {
+          width: 300px;
+        }
+      }
+    }
+
+    .separator {
+      width: 2px;
+      height: 350px;
+      border: 1px solid;
+      border-color: var(--background-color2);
+      margin: 0 20px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    h2 {
+      font-family: "Roboto Mono", monospace;
+      color: var(--text-color);
+      text-transform: uppercase;
+      font-size: 20px;
+      @include mobile {
+        font-size: 15px;
+        margin-left: 25px;
+      }
+    }
+    .selectBoxImg {
+      border: 1px solid;
+      border-color: var(--background-color2);
+    }
+
+    .selectBoxText {
+      display: flex;
+      align-self: left;
+      font-family: "Roboto Mono", monospace;
+      color: var(--text-color);
+      font-size: 15px;
+      padding: 5px;
+
+      @include mobile {
+        align-items: center;
+        font-size: 10px;
+      }
+    }
+
+    // .archWrapper,
+    // .webWrapper {
+    //   display: flex;
+    //   transition: width 0.3s ease;
+    //   width: 50%;
+    //   &:hover {
+    //     width: 170%;
+    //     h2 {
+    //       margin-top: 0;
+    //     }
+    //   }
+    //   &:not(:hover) {
+    //     width: 50%;
+    //     h2 {
+    //       margin-top: 0;
+    //     }
+    //   }
+    // }
+  }
+}

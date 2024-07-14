@@ -1,0 +1,84 @@
+//font-family: "Nunito Sans", sans-serif;
+//font-family: "Roboto Mono", monospace;
+//var(--text-color);
+//var(--background-color);
+root {
+  --background-color: #fff;
+  --background-color2: #222;
+  --bg-color: #222;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --btn-color-bg: #222;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+}
+
+[data-theme="dark"] {
+  --background-color: #222;
+  --background-color2: #fff;
+  --bg-color: #fff;
+  --btn-color: #fff;
+  --btn-text-color: #222;
+  --btn-color-bg: #fff;
+  --project-card-bg: #fff;
+  --text-color: #fff;
+  --form-text-color: #fff;
+  --footer-text-color: #bbb;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.sectionTitle {
+  margin-bottom: 30px;
+  @mobile {
+    margin-bottom: 10px;
+  }
+}
+.hover {
+  cursor: pointer;
+}
+
+// MOTION
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-color);
+  margin: 0 auto 60px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}

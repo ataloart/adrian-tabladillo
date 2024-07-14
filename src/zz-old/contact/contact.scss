@@ -1,0 +1,120 @@
+@import "../../App.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include mobile {
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+      margin-top: 80px;
+      gap: 15px;
+    }
+
+    h2 {
+      @include mobile {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+
+    h1 {
+      // font-family: "Roboto Mono", monospace;
+      font-family: "dm-sans", sans-serif;
+      font-size: 80px;
+      line-height: 80px;
+
+      @include mobile {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    margin: auto;
+
+    @include mobile {
+      width: 80%;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phoneSvg {
+      position: absolute;
+      z-index: -1;
+      @include mobile {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+      }
+      video {
+        width: 70%;
+
+        @include mobile {
+          width: 100%;
+          align-items: center;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include mobile {
+        width: 80%;
+        gap: 10px;
+        margin-bottom: 70px;
+      }
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 10px;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: rgb(98, 141, 114);
+        cursor: pointer;
+        font-weight: 500;
+
+        @include mobile {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
