@@ -42,6 +42,7 @@ const Portfolio = () => {
 
   const [isHoveringArch, setIsHoveringArch] = useState(false);
   const [isHoveringWeb, setIsHoveringWeb] = useState(false);
+
   const handleArchHover = () => {
     if (window.innerWidth >= 768) {
       setIsHoveringArch(true);
@@ -105,7 +106,7 @@ const Portfolio = () => {
               <img
                 src={selectAtaloArch}
                 alt="portfolio architecture"
-                onClick={() => window.open("https://www.behance.net/atalo_art")}
+                onClick={() => window.open("https://atalostudio.netlify.app")}
               />
             </div>
             <div className="selectBoxText">
